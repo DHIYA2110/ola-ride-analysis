@@ -23,38 +23,85 @@ Using **MySQL** for data processing and **Power BI** for visualization, the proj
 
 ---
 
-##  SQL Queries
-Key SQL tasks performed:
-1. Retrieve all successful bookings  
-2. Find average ride distance for each vehicle type  
-3. Get total number of rides cancelled by customers  
-4. Identify top 5 customers with the highest bookings  
-5. Count rides cancelled by drivers (personal & car issues)  
-6. Max & min driver ratings for Prime Sedan bookings  
-7. Retrieve rides paid via UPI  
-8. Average customer rating per vehicle type  
-9. Total booking value of successful rides  
-10. List all incomplete rides with reasons  
+## SQL Analysis
+Key queries performed:
+- Extracted successful bookings and calculated total successful ride value.
+- Found top 5 customers by booking value.
+- Calculated average ride distance per vehicle type.
+- Analyzed cancellations by customers and drivers.
+- Segmented revenue by payment method.
+- Compared driver and customer rating distributions.
+
+Sample SQL scripts are available in the [`sql_scripts`](./sql_scripts) folder.
 
 ---
 
-## 📊 Power BI Dashboard
-Key visuals include:
-- **Ride Volume Over Time**  
-- **Booking Status Breakdown**  
-- **Top 5 Vehicle Types by Ride Distance**  
-- **Customer & Driver Ratings Analysis**  
-- **Cancellation Reasons**  
-- **Revenue by Payment Method**  
-- **Top 5 Customers by Booking Value**  
+##  Dashboard Visualizations & Insights
 
+### **1. Booking Status Breakdown**
+![Booking Status Breakdown](./ola-project-reports/images/booking_status_breakdown.png)  
 
+**Insight:**  
+- 62% of bookings were successful.
+- 17% were cancelled by drivers, and 10% by customers — driver cancellations remain the largest operational challenge.
+- "Driver Not Found" accounted for ~9.8%, pointing to potential supply-demand mismatch.
 
 ---
 
-##  Key Insights
-- Found that **10% of cancellations** could be mitigated with targeted operational strategies.  
-- Identified **high-performing customer segments** and vehicle types to prioritize.  
-- Provided actionable recommendations for **reducing cancellations** and improving **customer satisfaction**.  
+### **2. Revenue by Payment Method**
+![Revenue by Payment Method](./ola-project-reports/images/revenue_by_payment_method.png)  
 
+**Insight:**  
+- UPI contributed the largest share of revenue, followed by cash.
+- Indicates strong adoption of digital payment systems.
+- Opportunity for targeted digital promotions and cashless incentives.
 
+---
+
+### **3. Cancellation Reasons**
+![Cancellation Reasons](./ola-project-reports/images/cancellation_reasons.png)  
+
+**Insight:**  
+- **Driver-side:** 35% cancellations due to personal & car-related issues — suggests need for operational support and vehicle maintenance programs.
+- **Customer-side:** Top reasons include "Driver not moving" and "Driver asked to cancel", highlighting potential training & service quality improvements.
+
+---
+
+### **4. Top 5 Customers**
+![Top 5 Customers](./ola-project-reports/images/top_5_customers.png)  
+
+**Insight:**  
+- Top 5 customers generated a total booking value of ₹32,612.
+- High-value customers can be targeted for loyalty programs and exclusive offers to retain them.
+
+---
+
+## Key Insights Summary
+- **Driver cancellations** are the biggest operational issue (35% due to personal/car-related reasons).
+- **UPI** is the preferred payment method, suggesting scope for digital-first campaigns.
+- **Top customers** contribute significant revenue and are prime candidates for loyalty retention.
+- **Booking status trends** highlight opportunities to reduce cancellations and increase successful rides.
+
+---
+
+## Recommendations
+- Implement driver support and incentive programs to reduce personal/car-related cancellations.
+- Expand digital payment offers and discounts for UPI users.
+- Launch targeted campaigns for weekends, when ride volume peaks.
+- Create premium packages for high-rating vehicle categories like Prime Sedan.
+
+---
+
+##  How to Run This Project
+1. **Run SQL Scripts**  
+   Open and execute the SQL scripts in MySQL Workbench to generate aggregated views.
+2. **View Dashboard**  
+   Open the Power BI dashboard (provided as `OLA_PROJECT.pdf` in this repo).  
+   `.pbix` file not uploaded due to GitHub file size restrictions.
+3. **Review Insights**  
+   Use the dashboard filters to analyze bookings by date range, vehicle type, payment method, and ratings.
+
+---
+
+##  License
+This project is released under the MIT License.
