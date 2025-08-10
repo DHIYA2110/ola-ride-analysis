@@ -32,7 +32,8 @@ Key queries performed:
 - Segmented revenue by payment method.
 - Compared driver and customer rating distributions.
 
-Sample SQL scripts are available in the [`ola dataset script.sql`](./ola dataset script.sql) folder.
+Sample SQL scripts are available in the [ola_dataset_script.sql](./scripts/ola_dataset_script.sql) folder.
+
 
 ---
 
